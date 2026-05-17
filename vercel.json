@@ -1,8 +1,11 @@
 {
-    "rewrites": [
-      {
-        "source": "/app/(.*)",
-        "destination": "/frontend/dist/index.html"
-      }
-    ]
-  }
+  "buildCommand": "cd frontend && npm ci && npm run build",
+  "installCommand": "cd frontend && npm ci",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/app/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
